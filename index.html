@@ -373,6 +373,22 @@ Download for macOS
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#E39A4C","options":["#E39A4C","#D9CBB6","#8FB8A0","#C98B76"]},"$preview":{"width":1440,"height":7000}}'>
 class Component extends DCLogic {
+  // The page renders after the browser's own #anchor jump, so links like ./#maps
+  // from other pages need the jump redone once the sections exist (and again
+  // after images load and shift the layout).
+  componentDidMount() {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (!id) return;
+    const go = () => document.getElementById(id)?.scrollIntoView();
+    let tries = 0;
+    const wait = () => {
+      if (document.getElementById(id)) go();
+      else if (tries++ < 40) setTimeout(wait, 50);
+    };
+    wait();
+    if (document.readyState !== 'complete') window.addEventListener('load', go, { once: true });
+  }
+
   renderVals() {
     return { accent: this.props.accent ?? '#E39A4C' };
   }

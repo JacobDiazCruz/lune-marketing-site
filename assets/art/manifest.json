@@ -1,0 +1,467 @@
+[
+ {
+  "id": "scholar",
+  "name": "Scholar",
+  "group": "people"
+ },
+ {
+  "id": "noblewoman",
+  "name": "Noblewoman",
+  "group": "people"
+ },
+ {
+  "id": "hooded-traveler",
+  "name": "Hooded Traveler",
+  "group": "people"
+ },
+ {
+  "id": "bounty-hunter",
+  "name": "Bounty Hunter",
+  "group": "people"
+ },
+ {
+  "id": "shieldmaiden",
+  "name": "Shieldmaiden",
+  "group": "people"
+ },
+ {
+  "id": "knight",
+  "name": "Knight",
+  "group": "people"
+ },
+ {
+  "id": "monk",
+  "name": "Monk",
+  "group": "people"
+ },
+ {
+  "id": "teacher",
+  "name": "Teacher",
+  "group": "people"
+ },
+ {
+  "id": "merchant",
+  "name": "Merchant",
+  "group": "people"
+ },
+ {
+  "id": "orc",
+  "name": "Orc",
+  "group": "creatures"
+ },
+ {
+  "id": "dragon",
+  "name": "Dragon",
+  "group": "creatures"
+ },
+ {
+  "id": "stone-troll",
+  "name": "Stone Troll",
+  "group": "creatures"
+ },
+ {
+  "id": "ghoul",
+  "name": "Ghoul",
+  "group": "creatures"
+ },
+ {
+  "id": "golden-statue",
+  "name": "Golden statue",
+  "group": "props"
+ },
+ {
+  "id": "warrior-statue",
+  "name": "Warrior statue",
+  "group": "props"
+ },
+ {
+  "id": "tower-house",
+  "name": "Stone tower house",
+  "group": "medieval"
+ },
+ {
+  "id": "tower-house-red",
+  "name": "Tower house, red roof",
+  "group": "medieval"
+ },
+ {
+  "id": "snowy-cottage",
+  "name": "Snowy cottage",
+  "group": "medieval"
+ },
+ {
+  "id": "thatched-cottage",
+  "name": "Thatched cottage",
+  "group": "medieval"
+ },
+ {
+  "id": "brick-cottage",
+  "name": "Brick cottage",
+  "group": "medieval"
+ },
+ {
+  "id": "timber-townhouse",
+  "name": "Timber townhouse",
+  "group": "medieval"
+ },
+ {
+  "id": "stone-townhouse",
+  "name": "Stone townhouse",
+  "group": "medieval"
+ },
+ {
+  "id": "market-stall",
+  "name": "Market stall",
+  "group": "medieval"
+ },
+ {
+  "id": "market-stall-2",
+  "name": "Covered stall",
+  "group": "medieval"
+ },
+ {
+  "id": "great-mausoleum",
+  "name": "Great mausoleum",
+  "group": "empire"
+ },
+ {
+  "id": "temple-agora",
+  "name": "Temple agora",
+  "group": "empire"
+ },
+ {
+  "id": "colonnade-market",
+  "name": "Colonnade market",
+  "group": "empire"
+ },
+ {
+  "id": "arena",
+  "name": "Arena",
+  "group": "empire"
+ },
+ {
+  "id": "amphitheatre",
+  "name": "Amphitheatre",
+  "group": "empire"
+ },
+ {
+  "id": "lighthouse",
+  "name": "Lighthouse",
+  "group": "empire"
+ },
+ {
+  "id": "domed-tower",
+  "name": "Domed tower",
+  "group": "empire"
+ },
+ {
+  "id": "upper-class-villa",
+  "name": "Upper-class villa",
+  "group": "empire"
+ },
+ {
+  "id": "middle-class-house",
+  "name": "Middle-class house",
+  "group": "empire"
+ },
+ {
+  "id": "slums",
+  "name": "Slums",
+  "group": "empire"
+ },
+ {
+  "id": "empire-market",
+  "name": "Market hall",
+  "group": "empire"
+ },
+ {
+  "id": "empire-house",
+  "name": "Townhouse",
+  "group": "empire"
+ },
+ {
+  "id": "eastern-castle",
+  "name": "Eastern castle",
+  "group": "eastern"
+ },
+ {
+  "id": "eastern-hall",
+  "name": "Eastern hall",
+  "group": "eastern"
+ },
+ {
+  "id": "eastern-house",
+  "name": "Eastern house",
+  "group": "eastern"
+ },
+ {
+  "id": "eastern-cart",
+  "name": "Eastern cart",
+  "group": "eastern"
+ },
+ {
+  "id": "babylonian-castle",
+  "name": "Babylonian castle",
+  "group": "babylonian"
+ },
+ {
+  "id": "babylonian-temple",
+  "name": "Babylonian temple",
+  "group": "babylonian"
+ },
+ {
+  "id": "babylonian-pyramid",
+  "name": "Stepped pyramid",
+  "group": "babylonian"
+ },
+ {
+  "id": "babylonian-house",
+  "name": "Babylonian house",
+  "group": "babylonian"
+ },
+ {
+  "id": "elven-village",
+  "name": "Elven village",
+  "group": "elven"
+ },
+ {
+  "id": "elven-manor",
+  "name": "Elven manor",
+  "group": "elven"
+ },
+ {
+  "id": "elven-hall",
+  "name": "Elven hall",
+  "group": "elven"
+ },
+ {
+  "id": "elven-spire",
+  "name": "Elven spire",
+  "group": "elven"
+ },
+ {
+  "id": "elven-gazebo",
+  "name": "Elven gazebo",
+  "group": "elven"
+ },
+ {
+  "id": "castle",
+  "name": "Castle",
+  "group": "castles"
+ },
+ {
+  "id": "dark-citadel",
+  "name": "Dark citadel",
+  "group": "castles"
+ },
+ {
+  "id": "ruined-church",
+  "name": "Ruined church",
+  "group": "castles"
+ },
+ {
+  "id": "ancient-ruins",
+  "name": "Ancient ruins",
+  "group": "castles"
+ },
+ {
+  "id": "castle-wall",
+  "name": "Castle wall section",
+  "group": "castles"
+ },
+ {
+  "id": "stone-wall",
+  "name": "Stone wall section",
+  "group": "castles"
+ },
+ {
+  "id": "farm-village",
+  "name": "Farm village",
+  "group": "farm"
+ },
+ {
+  "id": "windmill",
+  "name": "Windmill",
+  "group": "farm"
+ },
+ {
+  "id": "farmhouse",
+  "name": "Farmhouse",
+  "group": "farm"
+ },
+ {
+  "id": "farm-cottage",
+  "name": "Farm cottage",
+  "group": "farm"
+ },
+ {
+  "id": "barn",
+  "name": "Barn",
+  "group": "farm"
+ },
+ {
+  "id": "fields",
+  "name": "Crop fields",
+  "group": "farm"
+ },
+ {
+  "id": "well",
+  "name": "Well",
+  "group": "farm"
+ },
+ {
+  "id": "oak",
+  "name": "Oak",
+  "group": "nature"
+ },
+ {
+  "id": "green-tree",
+  "name": "Green tree",
+  "group": "nature"
+ },
+ {
+  "id": "autumn-tree",
+  "name": "Autumn tree",
+  "group": "nature"
+ },
+ {
+  "id": "red-tree",
+  "name": "Red tree",
+  "group": "nature"
+ },
+ {
+  "id": "snow-pine",
+  "name": "Snowy pine",
+  "group": "nature"
+ },
+ {
+  "id": "tall-pine",
+  "name": "Tall pine",
+  "group": "nature"
+ },
+ {
+  "id": "dead-tree",
+  "name": "Dead tree",
+  "group": "nature"
+ },
+ {
+  "id": "snow-range",
+  "name": "Snowy range",
+  "group": "nature"
+ },
+ {
+  "id": "snow-peak",
+  "name": "Snowy peak",
+  "group": "nature"
+ },
+ {
+  "id": "rocky-mountain",
+  "name": "Rocky mountain",
+  "group": "nature"
+ },
+ {
+  "id": "dark-mountain",
+  "name": "Dark mountain",
+  "group": "nature"
+ },
+ {
+  "id": "green-mountain",
+  "name": "Green mountain",
+  "group": "nature"
+ },
+ {
+  "id": "sand-mountain",
+  "name": "Sand mountain",
+  "group": "nature"
+ },
+ {
+  "id": "volcano",
+  "name": "Volcano",
+  "group": "nature"
+ },
+ {
+  "id": "twin-hill",
+  "name": "Twin hills",
+  "group": "nature"
+ },
+ {
+  "id": "hill",
+  "name": "Hill",
+  "group": "nature"
+ },
+ {
+  "id": "rock",
+  "name": "Rock",
+  "group": "nature"
+ },
+ {
+  "id": "bush",
+  "name": "Bush",
+  "group": "nature"
+ },
+ {
+  "id": "grass",
+  "name": "Tall grass",
+  "group": "nature"
+ },
+ {
+  "id": "chasm",
+  "name": "Chasm",
+  "group": "nature"
+ },
+ {
+  "id": "fountain",
+  "name": "Fountain",
+  "group": "props"
+ },
+ {
+  "id": "carriage",
+  "name": "Horse and carriage",
+  "group": "props"
+ },
+ {
+  "id": "hay-cart",
+  "name": "Hay cart",
+  "group": "props"
+ },
+ {
+  "id": "tent",
+  "name": "Tent",
+  "group": "props"
+ },
+ {
+  "id": "bonfire",
+  "name": "Bonfire",
+  "group": "props"
+ },
+ {
+  "id": "mine",
+  "name": "Mine entrance",
+  "group": "props"
+ },
+ {
+  "id": "rope-bridge",
+  "name": "Rope bridge",
+  "group": "props"
+ },
+ {
+  "id": "wooden-bridge",
+  "name": "Wooden bridge",
+  "group": "props"
+ },
+ {
+  "id": "stone-bridge",
+  "name": "Stone bridge",
+  "group": "props"
+ },
+ {
+  "id": "stairs",
+  "name": "Stairs",
+  "group": "props"
+ },
+ {
+  "id": "explosion",
+  "name": "Explosion",
+  "group": "props"
+ }
+]

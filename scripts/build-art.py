@@ -4,10 +4,12 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT = '/Users/carlcruz/Documents/Lune map assets/Isometric assets/'
+HERE = os.path.dirname(os.path.abspath(__file__)) + '/'
 OUT = '/Users/carlcruz/Downloads/Landing page-html/assets/art/'
 os.makedirs(OUT, exist_ok=True)
 
-# (source, slug, name, group)  — order = display order
+# (source, slug, name, group)  — order = display order. Sources starting with sources/
+# live in this folder (scripts/sources); the rest come from the Lune asset library.
 PIECES = [
   # Characters: people
   ('Humans/Scholar transparent.png', 'scholar', 'Scholar', 'people'),
@@ -19,12 +21,14 @@ PIECES = [
   ('Humans/Monk.png', 'monk', 'Monk', 'people'),
   ('Humans/Teacher.png', 'teacher', 'Teacher', 'people'),
   ('Humans/Merchant Final Render.png', 'merchant', 'Merchant', 'people'),
-  ('Humans/Character 13.png', 'armored-knight', 'Armored Knight', 'people'),
-  ('Humans/Char3.png', 'villager', 'Villager', 'people'),
   # Characters: creatures
+  ('sources/orc.webp', 'orc', 'Orc', 'creatures'),
   ('Creatures/Dragon 2.png', 'dragon', 'Dragon', 'creatures'),
   ('Creatures/13518.png', 'stone-troll', 'Stone Troll', 'creatures'),
   ('Creatures/Creature 2.png', 'ghoul', 'Ghoul', 'creatures'),
+  # World: statues lead the world grid
+  ('sources/golden-statue.webp', 'golden-statue', 'Golden statue', 'props'),
+  ('Statues/Warrior - Iso - Transparent.png', 'warrior-statue', 'Warrior statue', 'props'),
   # World: medieval
   ('Medieval/Medieval 5.png', 'tower-house', 'Stone tower house', 'medieval'),
   ('Medieval/Medieval 6.png', 'tower-house-red', 'Tower house, red roof', 'medieval'),
@@ -33,7 +37,6 @@ PIECES = [
   ('Houses/House10a.png', 'brick-cottage', 'Brick cottage', 'medieval'),
   ('Houses/House11.png', 'timber-townhouse', 'Timber townhouse', 'medieval'),
   ('Houses/House12s.png', 'stone-townhouse', 'Stone townhouse', 'medieval'),
-  ('Houses/House14.png', 'timber-house', 'Timber house', 'medieval'),
   ('Houses/Market.png', 'market-stall', 'Market stall', 'medieval'),
   ('Houses/Market2.png', 'market-stall-2', 'Covered stall', 'medieval'),
   # World: empire
@@ -70,7 +73,6 @@ PIECES = [
   ('Houses/Dark Citadel - Iso Transparent.png', 'dark-citadel', 'Dark citadel', 'castles'),
   ('Ruins/Ruined Church - ISO Transparent.png', 'ruined-church', 'Ruined church', 'castles'),
   ('Ruins/Ancient ruins - Iso - Transparent.png', 'ancient-ruins', 'Ancient ruins', 'castles'),
-  ('Castle/castle Asset 2  HD_ Castle Wall With Shadow.png', 'castle-wall-ring', 'Castle wall', 'castles'),
   ('Walls/Castle wall Quarter view.png', 'castle-wall', 'Castle wall section', 'castles'),
   ('Walls/Wall_ quarter view.png', 'stone-wall', 'Stone wall section', 'castles'),
   # World: farm
@@ -104,7 +106,6 @@ PIECES = [
   ('Terrains/Chasm.png', 'chasm', 'Chasm', 'nature'),
   # World: props
   ('Fountains/Fountain.png', 'fountain', 'Fountain', 'props'),
-  ('Statues/Warrior - Iso - Transparent.png', 'warrior-statue', 'Warrior statue', 'props'),
   ('Animals/Carriage 1.png', 'carriage', 'Horse and carriage', 'props'),
   ('Cart, Esplosion and cave/Cart 2.png', 'hay-cart', 'Hay cart', 'props'),
   ('Camp/Tent.png', 'tent', 'Tent', 'props'),
@@ -148,9 +149,15 @@ def trim(im):
 def fit(im, box):
     im = im.copy(); im.thumbnail(box, Image.LANCZOS); return im
 
+# Usage: python3 build-art.py            rebuild every piece
+#        python3 build-art.py orc dragon rebuild only these slugs
+only = set(sys.argv[1:])
 manifest = []
 for src, slug, name, group in PIECES:
-    im = Image.open(ROOT + src).convert('RGBA')
+    manifest.append({'id': slug, 'name': name, 'group': group})
+    if only and slug not in only:
+        continue
+    im = Image.open((HERE if src.startswith('sources/') else ROOT) + src).convert('RGBA')
     if slug == 'stone-troll':
         im = im.resize((im.width // 2, im.height // 2), Image.LANCZOS)
         im = cut_white(im, [(1572, 1757)])
@@ -160,7 +167,6 @@ for src, slug, name, group in PIECES:
     full = fit(im, (1800, 1800))
     thumb.save(OUT + slug + '.webp', 'WEBP', quality=86, method=6)
     full.save(OUT + slug + '-full.webp', 'WEBP', quality=88, method=6)
-    manifest.append({'id': slug, 'name': name, 'group': group, 'w': full.width, 'h': full.height})
     print(f'{slug:22} {group:10} full={full.size} thumb={thumb.size}')
 
 json.dump(manifest, open(OUT + 'manifest.json', 'w'), indent=1)

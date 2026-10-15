@@ -12,6 +12,7 @@ os.makedirs(OUT, exist_ok=True)
 # live in this folder (scripts/sources); the rest come from the Lune asset library.
 PIECES = [
   # Characters: people
+  ('sources/innkeeper.webp', 'innkeeper', 'Innkeeper', 'people'),
   ('Humans/Scholar transparent.png', 'scholar', 'Scholar', 'people'),
   ('Humans/Noblewoman 2.png', 'noblewoman', 'Noblewoman', 'people'),
   ('Humans/Hooded traveler.png', 'hooded-traveler', 'Hooded Traveler', 'people'),

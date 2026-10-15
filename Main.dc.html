@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lune — Write the book, draw the world</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Figtree:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#191716}
+a{color:#ECE5DA;text-decoration:none}a:hover{color:#FFFFFF}
+</style>
+</helmet>
+<div style="background: #191716; color: #ECE5DA; font-family: 'Figtree', system-ui, sans-serif; font-size: 17px; line-height: 1.6; min-height: 100vh">
+
+<!-- NAV -->
+<header style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+<a href="#top" style="font-family: 'Newsreader', Georgia, serif; font-size: 36px; line-height: 1; letter-spacing: -0.01em; color: #ECE5DA">Lune</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 28px; font-size: 15px">
+<a href="#writing" style="color: #C9C0B4">Writing</a>
+<a href="#maps" style="color: #C9C0B4">Maps</a>
+<a href="#timeline" style="color: #C9C0B4">Timeline</a>
+<a href="#assets" style="color: #C9C0B4">Map Assets</a>
+<a href="./Art.dc.html" style="color: #C9C0B4">Art</a>
+<a href="#pricing" style="color: #C9C0B4">Pricing</a>
+<a href="#about" style="color: #C9C0B4">About</a>
+</nav>
+</div>
+<a href="#download" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #4A433D; font-size: 15px; font-weight: 500; color: #ECE5DA">Download</a>
+</header>
+
+<!-- HERO -->
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 40px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 28px">
+<!-- <p style="margin: 0; display: inline-flex; align-items: center; gap: 10px; padding: 6px 14px; border: 1px solid #36312D; border-radius: 999px; font-size: 14px; color: #B8AEA1">
+<span style="width: 6px; height: 6px; border-radius: 999px; background: {{accent}}"></span>
+For novelists and worldbuilders · macOS &amp; iPhone
+</p> -->
+<h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(52px, 7.4vw, 104px); line-height: 1.02; letter-spacing: -0.025em; max-width: 960px">Write the book.<br><span style="font-style: italic; color: #D9CBB6">Draw the world.</span></h1>
+<p style="margin: 0; max-width: 640px; font-size: 20px; line-height: 1.55; color: #B8AEA1">Lune is a writing app with a map editor and a story timeline built in.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 8px">
+<a id="download" href="#download" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 14px; background: #6B5A45; color: #F5EFE6; font-size: 18px; font-weight: 500">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="M6 10l6 6 6-6"></path><path d="M4 20h16"></path></svg>
+Download for macOS
+</a>
+<a href="#writing" style="display: inline-flex; align-items: center; gap: 8px; min-height: 56px; padding: 0 20px; font-size: 17px; color: #C9C0B4">See what's inside
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
+<!-- <p style="margin: 0; font-size: 14px; color: #8F867B">[Free to try] · macOS [14] or later · Also on iPhone</p> -->
+</section>
+
+<section aria-label="Lune app preview" style="max-width: 1160px; margin: 0 auto; padding: 24px 24px 0">
+<img src="./assets/0cd33d886a743209df0b7f0ba8a6d963.webp" alt="Lune on Mac showing a world project with manuscript, maps and characters in the sidebar and an island map open, next to the iPhone app showing Chapter 6" style="display: block; width: 100%; height: auto">
+</section>
+
+<!-- THREE WAYS IN -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 120px 24px 40px">
+<h2 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em; text-align: center">One project. Three ways in.</h2>
+<p style="margin: 0 auto 56px; max-width: 560px; text-align: center; color: #B8AEA1">Most writers keep the draft in one app, the map in another and the timeline in a spreadsheet. Lune keeps them together and keeps them talking.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"></path><path d="M14 3v5h5"></path><path d="M9 13h7"></path><path d="M9 17h5"></path></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Manuscript</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Chapters, scenes and notes, linked to each other with [[wiki links]].</p>
+</div>
+<div style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"></path><path d="M9 4v14"></path><path d="M15 6v14"></path></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Map</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Paint terrain, place towns and forests, and pin each place to its note.</p>
+</div>
+<div style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 12px">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"></path><circle cx="7" cy="12" r="2"></circle><circle cx="14" cy="12" r="2"></circle><path d="M18 8v8"></path></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Timeline</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Dates and time jumps in your prose become events on one shared timeline.</p>
+</div>
+</div>
+</section>
+
+<!-- 01 WRITING -->
+<section id="writing" style="max-width: 1200px; margin: 0 auto; padding: 100px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">01 · Writing</p>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 54px); line-height: 1.06; letter-spacing: -0.02em">A quiet room to draft in.</h2>
+<p style="margin: 0; color: #B8AEA1">Write chapters in a calm, typeset editor. Wrap any name in [[double brackets]] and Lune turns it into a page in your world. Hover the name later to see who they are without leaving the sentence.</p>
+<ul style="margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px">
+<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: {{accent}}">—</span><span><strong style="font-weight: 600">Focus mode</strong> <span style="color: #B8AEA1">hides everything but the page.</span></span></li>
+<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: {{accent}}">—</span><span><strong style="font-weight: 600">Wiki links</strong> <span style="color: #B8AEA1">connect characters, places and lore as you type.</span></span></li>
+<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: {{accent}}">—</span><span><strong style="font-weight: 600">Word counts</strong> <span style="color: #B8AEA1">per chapter and for the whole book.</span></span></li>
+<li style="display: flex; gap: 12px; align-items: baseline"><span aria-hidden="true" style="color: {{accent}}">—</span><span><strong style="font-weight: 600">On iPhone too,</strong> <span style="color: #B8AEA1">for the scene that arrives on the bus.</span></span></li>
+</ul>
+</div>
+<div style="flex: 1 1 520px; min-width: 0; position: relative">
+<div style="border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; overflow: hidden">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 20px; border-bottom: 1px solid #2E2A27; font-size: 13px; color: #A99F93">
+<span>Manuscript / Chapter 6</span>
+<span>2,654 words</span>
+</div>
+<div style="padding: 40px clamp(24px, 5vw, 56px) 56px; font-family: 'Newsreader', Georgia, serif; font-size: 19px; line-height: 1.7; color: #DCD4C8">
+<p style="margin: 0 0 24px; text-align: center; font-size: 30px; color: #ECE5DA">Chapter 6</p>
+<p style="margin: 0 0 18px">The bells of Harrow had rung for three nights when <span style="color: #ECE5DA; border-bottom: 1.5px solid {{accent}}; background: #3A2E22; padding: 0 3px; border-radius: 3px">Cel</span> finally climbed the seawall. Below her the harbour was black glass, and past it, the lamps of the farmland were going out one by one.</p>
+<p style="margin: 0; color: #A99F93">She had promised Maren she would not come back here. She had promised a great many things that winter.</p>
+</div>
+</div>
+<div style="position: absolute; left: clamp(16px, 20%, 160px); top: 210px; width: 280px; max-width: calc(100% - 32px); border-radius: 14px; background: #2C2825; border: 1px solid #45403A; padding: 18px; display: flex; flex-direction: column; gap: 12px; font-size: 14px">
+<div style="display: flex; align-items: center; gap: 12px">
+<span aria-hidden="true" style="width: 36px; height: 36px; border-radius: 999px; background: #4B3C2C; color: #F0DCC2; display: inline-flex; align-items: center; justify-content: center; font-family: 'Newsreader', Georgia, serif; font-size: 18px">C</span>
+<span style="display: flex; flex-direction: column; line-height: 1.3"><strong style="font-weight: 600; font-size: 15px">Cel Varrow</strong><span style="color: #A99F93">Character</span></span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 12px; color: #A99F93">
+<span>House</span><span style="color: #ECE5DA">Varrow</span>
+<span>Born</span><span style="color: #ECE5DA">3 Thaw, 289 AE</span>
+<span>In this scene</span><span style="color: #ECE5DA">23 years old</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 02 MAPS -->
+<section id="maps" style="max-width: 1200px; margin: 0 auto; padding: 100px 24px; display: flex; flex-wrap: wrap-reverse; align-items: center; gap: 56px">
+<div style="flex: 1 1 560px; min-width: 0; position: relative">
+<img src="./assets/7731f30e543e5075f070f8ae87c8bce3.webp" alt="An island world painted in Lune's map editor, with a village of stone buildings and a pin labelled farmland" style="display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #2E2A27">
+<div style="position: absolute; right: 16px; bottom: 16px; width: 250px; max-width: calc(100% - 32px); border-radius: 14px; background: #2C2825; border: 1px solid #45403A; padding: 16px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">
+<span style="display: flex; align-items: center; gap: 8px; color: #A99F93">
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg>
+Location</span>
+<strong style="font-weight: 600; font-size: 16px">Farmland</strong>
+<span style="color: #B8AEA1">Where Cel grows up. Appears in Chapter 2 and Chapter 6.</span>
+</div>
+</div>
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">02 · Map editor</p>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 54px); line-height: 1.06; letter-spacing: -0.02em">Paint the coastline. Raise the city. Pin it to the story.</h2>
+<p style="margin: 0; color: #B8AEA1">The map editor works like a painting app: brush in land and sea, stamp forests and buildings from the asset library, and drop a pin on any place. Each pin opens the note behind it, so your map is part of your wiki, not a picture beside it.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px">
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #36312D; font-size: 14px; color: #C9C0B4">Terrain brush</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #36312D; font-size: 14px; color: #C9C0B4">Buildings &amp; trees</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #36312D; font-size: 14px; color: #C9C0B4">Linked pins</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #36312D; font-size: 14px; color: #C9C0B4">Labels</span>
+<span style="padding: 6px 12px; border-radius: 999px; border: 1px solid #36312D; font-size: 14px; color: #C9C0B4">Multiple maps per world</span>
+</div>
+</div>
+</section>
+
+<!-- 03 TIMELINE -->
+<section id="timeline" style="max-width: 1200px; margin: 0 auto; padding: 100px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 56px; margin-bottom: 48px">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">03 · Timeline</p>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.2vw, 54px); line-height: 1.06; letter-spacing: -0.02em">A timeline that fills in as you write.</h2>
+</div>
+<p style="margin: 0; flex: 1 1 380px; min-width: 0; color: #B8AEA1">Drop a time jump into a scene, like “three winters later”, and Lune moves the story clock forward. Every dated scene, era and event lands on one timeline, in your own calendar, reaching back before year zero if your history does.</p>
+</div>
+<div style="border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; overflow-x: auto">
+<div style="min-width: 760px; padding: 20px 24px 28px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 18px; margin-bottom: 18px; border-bottom: 1px solid #2E2A27; font-size: 13px; color: #A99F93">
+<span>Calendar: <span style="color: #ECE5DA">Age of Embers (AE)</span></span>
+<span style="display: inline-flex; gap: 16px"><span>Characters</span><span>Eras</span><span style="color: #ECE5DA">Events</span></span>
+</div>
+<div style="position: relative">
+<div style="display: flex; align-items: center; height: 36px">
+<span style="width: 110px; flex-shrink: 0; font-size: 13px; color: #8F867B">Eras</span>
+<div style="flex: 1; position: relative; height: 30px">
+<div style="position: absolute; left: 10%; width: 42.5%; top: 0; bottom: 0; border-radius: 8px; background: #2E3A33; color: #C3D6C8; font-size: 13px; display: flex; align-items: center; padding: 0 12px">The Quiet Years</div>
+<div style="position: absolute; left: 72.5%; width: 12.5%; top: 0; bottom: 0; border-radius: 8px; background: #46302A; color: #EBC7B8; font-size: 13px; display: flex; align-items: center; padding: 0 12px; white-space: nowrap; overflow: hidden">Harrow War</div>
+</div>
+</div>
+<div style="display: flex; align-items: center; height: 64px; border-bottom: 1px dashed #2E2A27">
+<span style="width: 110px; flex-shrink: 0; font-size: 15px">Cel</span>
+<div style="flex: 1; position: relative; height: 64px">
+<div style="position: absolute; left: 22.5%; right: 0; top: 31px; height: 2px; background: #6B5A45"></div>
+<span style="position: absolute; left: 22.5%; top: 26px; width: 12px; height: 12px; margin-left: -6px; border-radius: 999px; background: #D9CBB6"></span>
+<span style="position: absolute; left: 22.5%; top: 2px; margin-left: -6px; font-size: 12px; color: #A99F93; white-space: nowrap">Born 289</span>
+<span style="position: absolute; left: 52.5%; top: 25px; width: 14px; height: 14px; margin-left: -7px; border-radius: 4px; background: #191716; border: 2px solid #D9CBB6"></span>
+<span style="position: absolute; left: 52.5%; top: 42px; margin-left: -7px; font-size: 12px; color: #C9C0B4; white-space: nowrap">Ch. 2 · Harvest fair</span>
+</div>
+</div>
+<div style="display: flex; align-items: center; height: 64px; border-bottom: 1px dashed #2E2A27">
+<span style="width: 110px; flex-shrink: 0; font-size: 15px">Maren</span>
+<div style="flex: 1; position: relative; height: 64px">
+<div style="position: absolute; left: 0; right: 0; top: 31px; height: 2px; background: #6B5A45"></div>
+<span style="position: absolute; left: 35%; top: 25px; width: 14px; height: 14px; margin-left: -7px; border-radius: 4px; background: #191716; border: 2px solid #D9CBB6"></span>
+<span style="position: absolute; left: 35%; top: 42px; margin-left: -7px; font-size: 12px; color: #C9C0B4; white-space: nowrap">Ch. 4 · Leaves Varrow</span>
+</div>
+</div>
+<div style="display: flex; align-items: center; height: 64px">
+<span style="width: 110px; flex-shrink: 0; font-size: 15px">Orrin</span>
+<div style="flex: 1; position: relative; height: 64px">
+<div style="position: absolute; left: 40%; right: 0; top: 31px; height: 2px; background: #6B5A45"></div>
+<span style="position: absolute; left: 40%; top: 26px; width: 12px; height: 12px; margin-left: -6px; border-radius: 999px; background: #D9CBB6"></span>
+<span style="position: absolute; left: 40%; top: 2px; margin-left: -6px; font-size: 12px; color: #A99F93; white-space: nowrap">Born 296</span>
+<span style="position: absolute; left: 70%; top: 25px; width: 14px; height: 14px; margin-left: -7px; border-radius: 4px; background: #191716; border: 2px solid #D9CBB6"></span>
+<span style="position: absolute; left: 70%; top: 42px; margin-left: -60px; font-size: 12px; color: #C9C0B4; white-space: nowrap">Joins the Watch</span>
+</div>
+</div>
+<div style="display: flex; height: 28px; margin-top: 10px">
+<span style="width: 110px; flex-shrink: 0"></span>
+<div style="flex: 1; display: flex; justify-content: space-between; font-size: 12px; color: #8F867B; font-variant-numeric: tabular-nums">
+<span>280 AE</span><span>290</span><span>300</span><span>310</span><span>320</span>
+</div>
+</div>
+<div style="position: absolute; top: -6px; bottom: 24px; left: calc(110px + (100% - 110px) * 0.8); width: 2px; background: {{accent}}"></div>
+<span style="position: absolute; top: 46px; left: calc(110px + (100% - 110px) * 0.8 + 8px); padding: 4px 10px; border-radius: 8px; background: {{accent}}; color: #1E1408; font-size: 12px; font-weight: 600; white-space: nowrap">Ch. 6 · Siege of Harrow</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EVERYTHING ELSE -->
+<section id="features" style="max-width: 1200px; margin: 0 auto; padding: 100px 24px">
+<h2 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em">The details a long series needs.</h2>
+<p style="margin: 0 0 48px; max-width: 580px; color: #B8AEA1">Built with working authors who keep hundreds of characters straight across many books.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px">
+
+<article style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Ages, worked out for you</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Set a birthday once. Every event shows how old each character is at that moment.</p>
+<div style="margin-top: auto; border-radius: 12px; background: #191716; border: 1px solid #2E2A27; padding: 14px 16px; font-size: 14px; display: flex; flex-direction: column; gap: 8px">
+<span style="color: #A99F93">Siege of Harrow · 12 Frost, 312 AE</span>
+<span style="display: flex; justify-content: space-between"><span>Cel</span><span style="color: #D9CBB6; font-variant-numeric: tabular-nums">23</span></span>
+<span style="display: flex; justify-content: space-between"><span>Maren</span><span style="color: #D9CBB6; font-variant-numeric: tabular-nums">41</span></span>
+<span style="display: flex; justify-content: space-between"><span>Orrin</span><span style="color: #D9CBB6; font-variant-numeric: tabular-nums">16</span></span>
+</div>
+</article>
+
+<article style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">A wiki you can query</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Give notes properties like house, birthplace or status, then build live tables filtered by any of them.</p>
+<div style="margin-top: auto; border-radius: 12px; background: #191716; border: 1px solid #2E2A27; overflow: hidden; font-size: 14px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 10px 16px; color: #A99F93; border-bottom: 1px solid #2E2A27"><span>Name</span><span>House</span><span>Status</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 16px"><span>Cel</span><span style="color: #C9C0B4">Varrow</span><span style="color: #C3D6C8">Alive</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 16px"><span>Maren</span><span style="color: #C9C0B4">Varrow</span><span style="color: #C3D6C8">Alive</span></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 8px 16px 12px"><span>Orrin</span><span style="color: #C9C0B4">Ashby</span><span style="color: #EBC7B8">Missing</span></div>
+</div>
+</article>
+
+<article style="padding: 28px 28px 0; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px; overflow: hidden">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Keep writing on iPhone</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Your manuscript comes with you, with the same editor and the same word count.</p>
+<img src="./assets/72159022e34bedc51ab0d5de63366e83.webp" alt="Lune's iPhone app showing Chapter 6" style="display: block; width: 62%; max-width: 220px; height: 200px; object-fit: cover; object-position: top; margin: auto auto 0">
+</article>
+
+<article style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 3v4"></path><path d="M16 3v4"></path></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Your calendar, your eras</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Name your own months, set your own epoch, and write dates before year zero.</p>
+</article>
+
+<article style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><circle cx="12" cy="12" r="8"></circle></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Focus mode</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Hide the sidebar, the maps and the timeline. Just you and the page.</p>
+</article>
+
+<article style="padding: 28px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; display: flex; flex-direction: column; gap: 14px">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h10l4 4v12H5z"></path><path d="M12 11v6"></path><path d="M9 14l3 3 3-3"></path></svg>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 24px">Compile when it's ready</h3>
+<p style="margin: 0; color: #B8AEA1; font-size: 16px">Export the manuscript as [DOCX, PDF or EPUB] for your editor, your agent or your readers.</p>
+</article>
+</div>
+</section>
+
+<!-- MANIFESTO -->
+<section id="about" style="border-top: 1px solid #2A2623; border-bottom: 1px solid #2A2623; background: #1D1A19">
+<div style="max-width: 900px; margin: 0 auto; padding: 120px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 24px">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(40px, 5.6vw, 76px); line-height: 1.04; letter-spacing: -0.02em">Every word, every coastline, <span style="font-style: italic; color: #D9CBB6">yours.</span></h2>
+<p style="margin: 0; max-width: 600px; font-size: 19px; color: #B8AEA1">Lune has no generative AI. It won't write your chapters or invent your continents. It keeps track of what you make, so you can keep making it.</p>
+</div>
+</section>
+
+<!-- MADE BY HAND -->
+<section id="art" style="max-width: 1200px; margin: 0 auto; padding: 110px 24px 0">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 56px; margin-bottom: 40px">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Made by hand</p>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em">Every face here was painted by a person.</h2>
+<p style="margin: 0; max-width: 540px; color: #B8AEA1">Not generated, not traced, not “touched up”. Meet the cast, watch them get painted from the first pencil line, and browse every building, tree and mountain in Lune.</p>
+</div>
+<a href="./Art.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #4A433D; font-size: 15px; font-weight: 500">See the art
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg>
+</a>
+</div>
+<a href="./Art.dc.html" aria-label="Open the art gallery" style="display: block">
+<img src="./assets/faces-banner.webp" alt="Three hand-painted character portraits on black: a grey-haired scholar with round glasses and a green collar, a hooded figure with green eyes and a face mask, and a bearded warden in a hat and scarf" style="display: block; width: 100%; height: auto; border-radius: 18px; border: 1px solid #2E2A27; background: #000">
+</a>
+</section>
+
+<!-- MAP ASSETS -->
+<section id="assets" style="max-width: 1200px; margin: 0 auto; padding: 110px 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 56px; margin-bottom: 40px">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Map Assets</p>
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(34px, 4vw, 48px); line-height: 1.1; letter-spacing: -0.015em">Stock your world.</h2>
+<p style="margin: 0; max-width: 520px; color: #B8AEA1">Packs of buildings, trees and terrain to stamp straight onto your maps. [N] packs and counting.</p>
+</div>
+<a href="#assets" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid #4A433D; font-size: 15px; font-weight: 500">Browse all assets</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; overflow: hidden">
+<div style="height: 170px; background: #2D3A2F; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C3D6C8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"></path><path d="M5 20V11l4-3 4 3v9"></path><path d="M13 20v-6l4-3 3 2v7"></path><path d="M8 20v-4h2v4"></path></svg>
+</div>
+<div style="padding: 20px; display: flex; justify-content: space-between; gap: 12px"><span style="display: flex; flex-direction: column"><strong style="font-weight: 600">Villages &amp; farmsteads</strong><span style="font-size: 14px; color: #A99F93">[Pack name] · [N] pieces</span></span><span style="color: #D9CBB6">[Price]</span></div>
+</div>
+<div style="border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; overflow: hidden">
+<div style="height: 170px; background: #26332C; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C3D6C8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3l-5 8h3l-3 5h10l-3-5h3z"></path><path d="M8 16v5"></path><path d="M17 7l-3 5h2l-2 4h6l-2-4h2z"></path><path d="M17 16v5"></path></svg>
+</div>
+<div style="padding: 20px; display: flex; justify-content: space-between; gap: 12px"><span style="display: flex; flex-direction: column"><strong style="font-weight: 600">Forests &amp; wilds</strong><span style="font-size: 14px; color: #A99F93">[Pack name] · [N] pieces</span></span><span style="color: #D9CBB6">[Price]</span></div>
+</div>
+<div style="border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; overflow: hidden">
+<div style="height: 170px; background: #3A302A; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#EBC7B8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V8h3v2h2V8h4v2h2V8h3v13"></path><path d="M10 21v-4a2 2 0 0 1 4 0v4"></path><path d="M12 8V3l3 1.5L12 6"></path></svg>
+</div>
+<div style="padding: 20px; display: flex; justify-content: space-between; gap: 12px"><span style="display: flex; flex-direction: column"><strong style="font-weight: 600">Castles &amp; ruins</strong><span style="font-size: 14px; color: #A99F93">[Pack name] · [N] pieces</span></span><span style="color: #D9CBB6">[Price]</span></div>
+</div>
+</div>
+
+<!-- BRING YOUR OWN -->
+<div style="margin-top: 20px; border-radius: 18px; background: #211E1C; border: 1px solid #2E2A27; padding: clamp(28px, 4vw, 44px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px 56px">
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
+<p style="margin: 0; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: {{accent}}">Bring your own</p>
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(26px, 2.6vw, 34px); line-height: 1.12; letter-spacing: -0.015em">Nothing in the packs fits? Use your own.</h3>
+<p style="margin: 0; max-width: 520px; color: #B8AEA1">Drag any PNG onto the map and Lune drops it in at your map&rsquo;s scale with its transparency intact. Art you commissioned for your own book belongs on your own map.</p>
+</div>
+<ul style="flex: 0 1 280px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; color: #B8AEA1">
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Drag and drop a PNG</li>
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Sized to match the painted sets</li>
+<li style="display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D9CBB6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>Stays on your machine</li>
+</ul>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="pricing" style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 120px">
+<div style="border-radius: 24px; background: #241F1B; border: 1px solid #3A322B; padding: clamp(40px, 6vw, 80px) 24px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: clamp(38px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.02em">Start your world tonight.</h2>
+<p style="margin: 0; max-width: 520px; color: #B8AEA1">[Free to try. Lune Pro is [PRICE] a [month/year] for unlimited maps and projects.]</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px">
+<a href="#download" style="display: inline-flex; align-items: center; gap: 10px; min-height: 56px; padding: 0 28px; border-radius: 14px; background: #6B5A45; color: #F5EFE6; font-size: 18px; font-weight: 500">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"></path><path d="M6 10l6 6 6-6"></path><path d="M4 20h16"></path></svg>
+Download for macOS
+</a>
+<a href="#pricing" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 24px; border-radius: 14px; border: 1px solid #4A433D; font-size: 17px; font-weight: 500">See pricing</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid #2A2623">
+<div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 56px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; font-size: 14px; color: #A99F93">
+<span style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; color: #ECE5DA">Lune</span><span>Write the book. Draw the world.</span></span>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 24px">
+<a href="#about" style="color: #A99F93">About</a>
+<a href="#pricing" style="color: #A99F93">Pricing</a>
+<a href="#assets" style="color: #A99F93">Map Assets</a>
+<a href="./Art.dc.html" style="color: #A99F93">Art</a>
+<a href="#top" style="color: #A99F93">Privacy</a>
+<a href="#top" style="color: #A99F93">Contact</a>
+</nav>
+<span>© 2026 Lune</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#E39A4C","options":["#E39A4C","#D9CBB6","#8FB8A0","#C98B76"]},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#E39A4C' };
+  }
+}
+</script>
+</body>
+</html>
